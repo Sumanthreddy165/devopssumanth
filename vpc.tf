@@ -2,14 +2,11 @@ resource "aws_vpc" "default" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
   tags = {
-      Name      = "${var.vpc_name}"
-      Tag1      = "one1"
-      Tag2      = "Two2"
-      Tag3      = "Three3"
-    Owner       = "Sreeharsha Veerapalli"
-    environment = "${var.environment}"
+      Name        = "${var.vpc_name}"
+      Owner       = "Sreeharsha Veerapalli"
+      environment = "${var.environment}"
   }
-  
+
 }
 
 resource "aws_internet_gateway" "default" {
